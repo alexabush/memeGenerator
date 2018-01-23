@@ -1,0 +1,30 @@
+body {
+    width: 400px;
+    background-color: #f5deb3;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    background-color: red;
+}
+
+main {
+    background-color: yellow;
+}
+form {
+    background-color: orange;
+    /*display: flex;*/
+}
+
+form section {
+    display: block;
+}
+
+form input {
+    width: 60%;
+}
+
+/*button {
+    justify-content: center;
+}*/
