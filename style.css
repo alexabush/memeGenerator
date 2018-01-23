@@ -13,6 +13,11 @@ label, p, button {
     font-size: 24px;
 }
 
+img {
+    height: 100px;
+    width: 100px;
+}
+
 header {
   text-align: center;
   background-color: red;
