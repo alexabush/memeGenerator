@@ -1,29 +1,50 @@
 body {
-    width: 400px;
-    background-color: #f5deb3;
-    margin: auto;
+  width: 400px;
+  background-color: #f5deb3;
+  margin: auto;
 }
 
 header {
-    text-align: center;
-    background-color: red;
+  text-align: center;
+  background-color: red;
 }
 
 main {
-    background-color: yellow;
+  background-color: yellow;
 }
+
 form {
-    background-color: orange;
-    /*display: flex;*/
+  background-color: orange;
+  /*display: flex;*/
 }
 
 form section {
-    display: block;
+  display: block;
 }
 
 form input {
-    width: 60%;
+  width: 60%;
+  padding: 0 5px;
+  margin: 3px 0;
+  /*box-sizing: border-box;*/
 }
+
+form input:focus {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 
 /*button {
     justify-content: center;
