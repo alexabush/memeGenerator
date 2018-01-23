@@ -14,9 +14,50 @@ label, p, button {
 }
 
 img {
-    height: 100px;
-    width: 100px;
+    max-height: 400px;
+    max-width: 400px;
 }
+
+
+/*Moved to js file so styles will be applied dynamicly*/
+/*#displayArea {
+    display: flex;
+}*/
+
+.imgSection {
+    position: relative;
+    color: white;
+}
+
+.imgSection p {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.topText {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    color: orange;
+    transform: translate(-50%);
+}
+
+.bottomText {
+    position: absolute;
+    bottom: 20px;
+    left: 40%;
+    color: purple;
+    transform: translate(-50%);
+}
+
+.imgSection button {
+    position: absolute;
+    left: 0px;
+}
+
+
+
+
 
 header {
   text-align: center;
