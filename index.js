@@ -32,6 +32,8 @@ form.addEventListener('submit', function(e) {
   section.append(newBtn);
 
   displayArea.append(section);
+
+  form.reset();
 });
 
 displayArea.addEventListener('click', function(e) {
