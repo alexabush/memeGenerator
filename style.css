@@ -1,63 +1,63 @@
 body {
-  width: 500px;
+  max-width: 500px;
   background-color: #f5deb3;
   margin: auto;
 }
 
 h1 {
-    font-size: 56px;
-    font-weight: bolder;
+  font-size: 56px;
+  font-weight: bolder;
 }
 
-label, p, button {
-    font-size: 24px;
+label,
+p,
+button {
+  font-size: 24px;
 }
 
 img {
-    max-height: 400px;
-    max-width: 400px;
+  max-height: 400px;
+  max-width: 400px;
 }
 
-
-/*Moved to js file so styles will be applied dynamicly*/
-/*#displayArea {
+#displayArea {
     display: flex;
-}*/
+    flex-direction: column;
+    align-items: center;
+}
 
 .imgSection {
-    position: relative;
-    color: white;
+  position: relative;
+  color: white;
+  margin: 15px 0;
 }
 
 .imgSection p {
-    font-size: 42px;
-    font-weight: bold;
+  font-size: 42px;
+  font-weight: bold;
 }
 
 .topText {
-    position: absolute;
-    top: 0;
-    left: 40%;
-    color: orange;
-    transform: translate(-50%);
+  position: absolute;
+  top: 0;
+  left: 40%;
+  color: orange;
+  transform: translate(-50%);
 }
 
 .bottomText {
-    position: absolute;
-    bottom: 20px;
-    left: 40%;
-    color: purple;
-    transform: translate(-50%);
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+  color: purple;
+  transform: translate(-50%);
 }
 
 .imgSection button {
-    position: absolute;
-    left: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
-
-
-
-
 
 header {
   text-align: center;
@@ -66,12 +66,10 @@ header {
 }
 
 main {
-  /*background-color: yellow;*/
   padding: 5px;
 }
 
 form {
-  /*background-color: orange;*/
   padding: 5px;
 }
 
@@ -85,7 +83,6 @@ form input {
   height: 20px;
   padding: 0 5px;
   margin: 3px 0;
-  /*box-sizing: border-box;*/
 }
 
 form input:focus {
@@ -94,7 +91,7 @@ form input:focus {
 }
 
 form section:last-of-type {
-    text-align: center;
+  text-align: center;
 }
 
 form button {
