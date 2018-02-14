@@ -1,5 +1,5 @@
 $red: #F04D47;
-$background: #efece5;
+$white: #efece5;
 $blue: #51b3bf;
 
 * {
@@ -9,7 +9,7 @@ $blue: #51b3bf;
 
 body {
   max-width: 500px;
-  background-color: $background;
+  background-color: $white;
   margin: auto;
 }
 
@@ -17,18 +17,13 @@ h1 {
   font-size: 56px;
   font-weight: bolder;
   padding: 30px 0;
+  color: $white;
 }
 
 label,
 p,
 button {
   font-size: 24px;
-}
-
-img {
-  max-width: 500px;
-  max-height: 500px;
-  object-fit: contain;
 }
 
 header {
@@ -68,7 +63,7 @@ form {
   button {
     background-color: purple;
     border: none;
-    color: white;
+    color: $white;
     padding: 16px 32px;
     border-radius: 6px;
     text-decoration: none;
@@ -79,32 +74,50 @@ form {
 
 .imgSection {
   position: relative;
-  display: flex; // justify-content: center;
-  color: white;
+  color: $white;
   margin: 15px 0;
+  border: 1px solid $white;
+
   p {
     font-size: 42px;
     font-weight: bold;
+  }
+
+  img {
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: contain;
   }
 }
 
 .topText {
   position: absolute;
-  top: 105px;
-  transform: translate(100px);
-}
+  top: 0px;
+  width: 100%;
+  text-align: center;}
 
 .bottomText {
   position: absolute;
-  bottom: 105px;
-  transform: translate(100px);
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
 }
 
 .imgSection button {
   position: absolute;
   left: 0px;
-  top: 110px;
+  top: 0px;
+  padding: 5px;
+  transition: all .25s;
+  border: none;
+  // transition: color 5s;
+
+  &:hover {
+    background-color: $red;
+    color: $white;
+  }
 }
+
 
 #displayArea {
   display: flex;
