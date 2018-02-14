@@ -1,42 +1,67 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form');
-    const inputs = document.querySelectorAll('input');
-    const displayArea = document.getElementById('displayArea');
+  const form = document.querySelector('form');
+  const inputs = document.querySelectorAll('input');
+  const displayArea = document.getElementById('displayArea');
+  addRickAndMorty();
 
-    form.addEventListener('submit', function(e) {
-      const text1 = inputs[0].value;
-      const text2 = inputs[1].value;
-      const text3 = inputs[2].value;
 
-      const section = document.createElement('section');
-      const image = document.createElement('img');
-      const topText = document.createElement('p');
-      const bottomText = document.createElement('p');
-      const newBtn = document.createElement('button');
+  form.addEventListener('submit', function(e) {
+    const section = document.createElement('section');
+    const image = document.createElement('img');
+    const topText = document.createElement('p');
+    const bottomText = document.createElement('p');
+    const newBtn = document.createElement('button');
 
+    addContent();
+
+    section.append(image, topText, bottomText, newBtn);
+    displayArea.append(section);
+
+    form.reset();
+
+    function addContent() {
       section.classList.add('imgSection');
       topText.classList.add('topText');
       topText.style["background-color"] = "orange;"
       bottomText.classList.add('bottomText')
 
-      image.src = text1;
-      topText.textContent = text2;
-      bottomText.textContent = text3;
+      image.src = inputs[0].value;
+      topText.textContent = inputs[1].value;
+      bottomText.textContent = inputs[2].value;
       newBtn.textContent = "X";
+    }
+  });
 
-      section.append(image)
-      section.append(topText);
-      section.append(bottomText)
-      section.append(newBtn);
+  displayArea.addEventListener('click', function(e) {
+    if (e.target.tagName === "BUTTON") {
+      e.target.parentElement.remove();
+    }
+  });
 
-      displayArea.append(section);
+  function addRickAndMorty() {
+    const section = document.createElement('section');
+    const image = document.createElement('img');
+    const topText = document.createElement('p');
+    const bottomText = document.createElement('p');
+    const newBtn = document.createElement('button');
 
-      form.reset();
-    });
+    addContent();
 
-    displayArea.addEventListener('click', function(e) {
-      if (e.target.tagName === "BUTTON") {
-        e.target.parentElement.remove();
-      }
-    });
+    section.append(image, topText, bottomText, newBtn);
+    displayArea.append(section);
+
+    form.reset();
+
+    function addContent() {
+      section.classList.add('imgSection');
+      topText.classList.add('topText');
+      topText.style["background-color"] = "orange;"
+      bottomText.classList.add('bottomText')
+
+      image.src = "https://i.ytimg.com/vi/0Y4mx6KJAIk/maxresdefault.jpg";
+      topText.textContent = "I'm Mr. Meeseeks";
+      bottomText.textContent = "Look At Me!";
+      newBtn.textContent = "X";
+    }
+  }
 });
